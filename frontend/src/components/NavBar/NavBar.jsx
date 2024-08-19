@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import './navbar.css'
 import {assets} from '../../assets/assets'
 import {Link} from 'react-router-dom'
-const navbar = () => {
-    const [menu, setMenu] = useState("home");
 
+const NavBar = ({setShowLogin}) => {
+    const [menu, setMenu] = useState("home");
   return (
     <div className='navbar'>
         <img src={assets.logo} alt="logo" className="logo" />
@@ -20,10 +20,10 @@ const navbar = () => {
                 <img src={assets.basket_icon} alt="basket-icon" /> 
                 <div className="dot"></div>   
             </div>            
-            <button>sign up</button>
+            <button onClick={()=>setShowLogin(true)}>sign up</button>
         </div>
     </div>
   )
 }
 
-export default navbar
+export default NavBar
