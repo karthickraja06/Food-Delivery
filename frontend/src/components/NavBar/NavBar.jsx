@@ -4,7 +4,7 @@ import {assets} from '../../assets/assets'
 import {Link} from 'react-router-dom'
 import { StoreContext } from '../../context/StoreContext'
 
-const NavBar = ({setShowLogin}) => {
+const navbar = ({setShowLogin}) => {
     const [menu, setMenu] = useState("home");
     const {getTotalCartAmount} = useContext(StoreContext)
   return (
@@ -28,4 +28,4 @@ const NavBar = ({setShowLogin}) => {
   )
 }
 
-export default NavBar
+export default navbar
