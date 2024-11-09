@@ -2,11 +2,11 @@ import userModel from "../models/userModel.js";
 import jwt from 'jsonwebtoken'
 import bycrpt from 'bcrypt'
 import validator from  'validator'
-import { response } from "express";
 
 //login user    
 const loginUser = async (req,res) => {
-    const {email,password} = req.body
+    const {email,password} = req.body;
+
     try {
         const user = await userModel.findOne({email})
         if(!user){
