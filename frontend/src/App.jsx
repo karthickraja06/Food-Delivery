@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer.jsx'
 import NavBar from './components/NavBar/NavBar.jsx'
 import LoginPopup from './components/LoginPopup/LoginPopup.jsx'
 import Verify from './pages/verify/Verify.jsx'
+import MyOrders from './pages/MyOrders/MyOrders.jsx'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='/cart' element = {<Cart/>}/>
           <Route path='/order' element = {<Placeorder/>}/>
           <Route path='/verify' element={<Verify/>}/>
+          <Route path='/myorders' element={<MyOrders/>}/>
         </Routes>
       </div>
       <Footer/>
